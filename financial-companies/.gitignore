@@ -1,0 +1,11 @@
+# Dependency Modules
+node_modules
+
+# App Packaged
+dist/
+dist-tmp/
+build/
+*.zip
+
+# OSX
+.DS_Store
