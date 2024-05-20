@@ -79,3 +79,26 @@ Financial Companies - localhost:8082
 
 Admin - localhost:8083
 - `/investments/:id` get an investment record by id
+- `/generate-csv-report` get the csv with required data
+
+### Running Tests
+To run the test suite, execute the following command:
+```bash
+npx jest
+```
+## Answers
+ 1. How might you make this service more secure?
+ - Implement OAuth 2.0 to ensure only authorized  users can access the service.
+ - Sanitize inputs to prevent SQL injection, XSS, and other attacks.
+ - Implement rate limiting to prevent abuse and DDoS attacks.
+ - Maintain detailed logs for audit purposes and to detect suspicious activities.
+ 2. How would you make this solution scale to millions of records?
+ - Decompose the monolithic application into microservices to manage different functionalities independently.
+ - Use scalable distributed databases like Cassandra or MongoDB to handle large volumes of data.
+ - Implement data partitioning to distribute the data across multiple servers, improving read and write performance.
+ - Utilize caching layers with Redis or Memcached to reduce database load and improve response times.
+ 3. What else would you have liked to improve given more time?
+ - Enhance logging and monitoring using tools like the ELK stack (Elasticsearch, Logstash, Kibana) or Prometheus and Grafana to gain better insights and detect issues early.
+ - Implement a robust automated testing framework and set up (CI/CD) pipelines to improve code quality and accelerate deployment.
+ - Improve API documentation using tools like Swagger to ensure developers can easily understand and use the service.
+ - Incorporate an event-driven architecture with tools like Apache Kafka to handle real-time data processing and improve system responsiveness.
